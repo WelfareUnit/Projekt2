@@ -1,0 +1,2 @@
+t	Alfa	omega	energia
+0.000100	nan	nan	
