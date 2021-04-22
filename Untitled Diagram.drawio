@@ -1,17 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2021-04-22T21:16:54.992Z" agent="5.0 (Windows)" etag="nzMLklvuLHZTHCFPCJzs" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-22T21:23:23.453Z" agent="5.0 (Windows)" etag="L2BQj0dzeYmsjAWsBUAq" version="14.6.6" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
     <mxGraphModel dx="942" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="FWeo1_BL_VegPmoIYy2M-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Verdana;startArrow=classic;startFill=0;" edge="1" parent="1" source="FWeo1_BL_VegPmoIYy2M-1" target="FWeo1_BL_VegPmoIYy2M-5">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="FWeo1_BL_VegPmoIYy2M-6" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;Konsultacja&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Verdana;startArrow=classic;startFill=0;fontSize=11;" edge="1" parent="1" source="FWeo1_BL_VegPmoIYy2M-1" target="FWeo1_BL_VegPmoIYy2M-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="390" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="FWeo1_BL_VegPmoIYy2M-1" value="Złożenie ZP przez wnioskodawcę" style="triangle;whiteSpace=wrap;html=1;fontFamily=Verdana;align=left;strokeWidth=7;rounded=1;fillColor=#cccccf;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="40" y="240" width="140" height="110" as="geometry" />
+        <mxCell id="FWeo1_BL_VegPmoIYy2M-1" value="Złożenie ZP przez wnioskodawcę" style="triangle;whiteSpace=wrap;html=1;fontFamily=Verdana;align=left;strokeWidth=2;rounded=1;fillColor=#cccccf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="140" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="FWeo1_BL_VegPmoIYy2M-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;fontFamily=Verdana;strokeColor=#162632;strokeWidth=7;fillColor=#cccccf;align=left;" vertex="1" parent="1">
-          <mxGeometry x="70" y="400" width="80" height="80" as="geometry" />
+        <mxCell id="FWeo1_BL_VegPmoIYy2M-9" value="&lt;div align=&quot;center&quot;&gt;Pan Brzuska&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;rounded=1;fontFamily=Verdana;fontSize=12;strokeColor=#000000;strokeWidth=2;fillColor=#CCCCCF;align=left;" vertex="1" parent="1">
+          <mxGeometry x="70" y="390" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FWeo1_BL_VegPmoIYy2M-11" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;Biuro SSPW&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;fontFamily=Verdana;fontSize=12;strokeWidth=2;fillColor=#CCCCCF;align=center;strokeColor=#C85800;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="370" y="238.32" width="123.37" height="123.37" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
