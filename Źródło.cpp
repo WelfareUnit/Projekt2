@@ -3,19 +3,12 @@
 #include <stdlib.h>
 #include "rk4.h"
 #define G 9.81
-#define C 0.33
 #pragma warning(disable:4996)		//umożlliwienie uzywania scanf w Visual 2019
-double ro=1.1, s=2,m=50,l=3,v0=10;
+double w0=10,a0=15,m=50,l=3;
 void rhs_fun(double t, double* tab,double* prawa)//funkcja obliczajaca prawą stronę równania różniczkowego
 {
-	long double Vox, Voy;
-	Vox = tab[1] * l * cos(tab[0]);
-	Voy= tab[1] * l * sin(tab[0]);
-	long double VoD2 = powl(-Vox + v0 * sin(t), 2.) + powl(Voy, 2.);		//Kwadrat prędkości wzgl. powietrza
-	long double VodprY2 = powl(v0 * sin(t) * sin(tab[0]), 2.);				//kwadrat składowej ↑ stycznej  do toru ruchu
-	prawa[0] = tab[1];
-	prawa[1] = (ro/2*(VoD2-VodprY2)*s*C-m*G*sin(tab[0])) / (m * l);
-	printf("");
+	prawa[0]=tab[1];
+	prawa[1]=-G/l*sin(tab[1]);
 }
 double energia(double a, double w)		//obliczanie energii
 {
@@ -26,25 +19,23 @@ double energia(double a, double w)		//obliczanie energii
 int main()
 {
 	double h = 0.0001;					//Większa dokładność,przydatna szczególnie w niestandardowych zestawach danych
-	int n = 2;
-	double t = 0;
-	double tk = 9;
+	int n = 2;							//liczba zmiennych (u nas alfa i omega wiec 2)
+	double t = 0;						//czas poczatkowy to 0
+	double tk = 9;						//czas koncowy to 9s
 	double danepocz[2], danekonc[2];
 	FILE* f = fopen("wyniki.txt", "w");
 	printf("Podaj teraz warunki poczatkowe wahadla\n");
-	printf("Masa ciezarka[kg]:  ");
+	printf("Masa ciezarka[kg]: ");
 	scanf("%lf", &m);
-	printf("\nPowierzchnia [m^2]: ");
-	scanf("%lf", &s);
-	printf("\nDlugosc sznurka[m]:\t");
+	printf("\nDlugosc sznurka[m]: ");
 	scanf("%lf", &l);
-	printf("\nV0 dmuchawy[m/s]: ");
-	scanf("%lf", &v0);
-	
-	
-	danepocz[0] = 0;
-	danepocz[1] = 0;
-	fprintf(f, "t\tAlfa\tomega\tenergia\n");
+	printf("\nPodaj wychylenie początkowe: ");
+	scanf("%lf",&a0);
+	printf("\nPodaj poczatkowa predkosc katowa: ");
+	scanf("%lf",&w0);
+	danepocz[0] = a0;
+	danepocz[1] = w0;
+	fprintf(f, "t\tAlfa\tomega\tenergia\n");		//naglowek pliku
 	while (t < tk)
 	{
 		fprintf(f, "%lf\t", t + h);
