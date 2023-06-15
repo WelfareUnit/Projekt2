@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T16:23:22.505Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="YnlPJ133HJhf4QANFfkn" version="21.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-15T16:25:50.366Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="syL9YP5YD9ZvMoFrXJdD" version="21.4.0" type="github">
   <diagram name="Strona-1" id="7y1bbHH6pKz6bEYP6Cvj">
     <mxGraphModel dx="596" dy="413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -87,6 +87,12 @@
         </mxCell>
         <mxCell id="n95og1urTgADcSXksq1J-18" value="α" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="449" y="327.52" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DCshJSXJCcwkppHhtiSB-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6395938965312841;endAngle=0.8675682592888079;" vertex="1" parent="1">
+          <mxGeometry x="509" y="357.52" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DCshJSXJCcwkppHhtiSB-5" value="." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="382.52" height="10" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
