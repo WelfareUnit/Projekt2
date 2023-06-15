@@ -23,7 +23,7 @@ int main()
 	double t = 0;						//czas poczatkowy to 0s
 	double tk = 6;						//czas koncowy to 6s
 	double a0 = 0, w0 = 0;				//zmienne na kąt i prędkość kątową początkowe
-	double danepocz[2], danekonc[2];	//tabela na kąt i prędkość kątową przed i po obliczeniach
+	double tabpocz[2], tabkonc[2];	//tabela na kąt i prędkość kątową przed i po obliczeniach
 	
 	printf("Prosze, podaj warunki poczatkowe wahadla\n");
 	printf("Masa kulki [kg]: ");
@@ -44,8 +44,8 @@ int main()
 	}
 	
 	w0 *= 3.1415 / 180.0;
-	danepocz[0] = a0;
-	danepocz[1] = w0;
+	tabpocz[0] = a0;
+	tabpocz[1] = w0;
 	FILE* f = fopen("wyniki.txt", "w");										//otwarcie pliku do zapisu
 
 	fprintf(f, "t\tKat\tPredkosc katowa\tEnergia calkowita\n");				//naglowek pliku z danymi 
@@ -54,12 +54,12 @@ int main()
 	fprintf(f, "%lf\n", energia(a0, w0));
 	while (t < tk)
 	{
-		vrk4(t, danepocz, h, n, rhs_fun, danekonc);												//liczenie prawej strony rownania rozniczkowego metodą Rungego-Kutty
+		vrk4(t, tabpocz, h, n, rhs_fun, tabkonc);												//liczenie prawej strony rownania rozniczkowego metodą Rungego-Kutty
 		fprintf(f, "%lf\t", t + h);
-		fprintf(f, "%lf\t%lf\t", danekonc[0]*180.0 / 3.1415,danekonc[1]*180.0 / 3.1415);		//zapisywanie do pliku poszczególnych wyników 
-		fprintf(f, "%lf\n", energia(danekonc[0], danekonc[1]));
+		fprintf(f, "%lf\t%lf\t", tabkonc[0]*180.0 / 3.1415,tabkonc[1]*180.0 / 3.1415);		//zapisywanie do pliku poszczególnych wyników 
+		fprintf(f, "%lf\n", energia(tabkonc[0], tabkonc[1]));
 		for (int i = 0; i < n; i++)																// wyniki jednego kroku różniczkowania staja sie danymi wejsciowymi nastepnego
-			danepocz[i] = danekonc[i];
+			tabpocz[i] = tabkonc[i];
 		t += h;
 	}
 	fclose(f);
