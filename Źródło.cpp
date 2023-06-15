@@ -30,7 +30,7 @@ int main()
 	scanf("%lf", &m);
 	printf("\nDlugosc sznurka[m]: ");
 	scanf("%lf", &l);
-	while (a0 = 0)
+	while (a0 == 0)						//sprawdzenie warunkow poczatkowych
 	{
 		printf("\nPodaj wychylenie początkowe:(deg, =/= 0!)  ");
 		scanf("%lf", &a0);
