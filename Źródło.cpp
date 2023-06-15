@@ -18,7 +18,7 @@ double energia(double a, double w)		//obliczanie energii
 }
 int main()
 {
-	double h = 0.001;					//Większa dokładność przy mniejszym kroku rożniczkowania
+	double h = 0.01;					//Większa dokładność przy mniejszym kroku rożniczkowania
 	int n = 2;							//liczba zmiennych (u nas alfa i omega wiec 2)
 	double t = 0;						//czas poczatkowy to 0s
 	double tk = 6;						//czas koncowy to 6s
@@ -30,11 +30,19 @@ int main()
 	scanf("%lf", &m);
 	printf("\nDlugosc sznurka[m]: ");
 	scanf("%lf", &l);
-	printf("\nPodaj wychylenie początkowe:(deg) ");
-	scanf("%lf",&a0);
+	while (a0 = 0)
+	{
+		printf("\nPodaj wychylenie początkowe:(deg, =/= 0!)  ");
+		scanf("%lf", &a0);
+	}
+	
 	a0 *= 3.1415/180.0;					//zamiana kątów na radiany
-	printf("\nPodaj poczatkowa predkosc katowa:(deg/s) ");
-	scanf("%lf",&w0);
+	while (w0 == 0)
+	{
+		printf("\nPodaj poczatkowa predkosc katowa:(deg/s, =/=0!) ");
+		scanf("%lf", &w0);
+	}
+	
 	w0 *= 3.1415 / 180.0;
 	danepocz[0] = a0;
 	danepocz[1] = w0;
