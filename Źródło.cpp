@@ -18,7 +18,7 @@ double energia(double a, double w)		//obliczanie energii
 }
 int main()
 {
-	double h = 0.001;					//Większa dokładność,przydatna szczególnie w niestandardowych zestawach danych ale moze troche przesadzilem
+	double h = 0.001;					//Większa dokładność przy mniejszym kroku rożniczkowania
 	int n = 2;							//liczba zmiennych (u nas alfa i omega wiec 2)
 	double t = 0;						//czas poczatkowy to 0s
 	double tk = 6;						//czas koncowy to 6s
@@ -38,14 +38,17 @@ int main()
 	w0 *= 3.1415 / 180.0;
 	danepocz[0] = a0;
 	danepocz[1] = w0;
-	fprintf(f, "t\tKąt\tPrędkość kątowa\tEnergia całkowita\n");		//naglowek pliku
+	fprintf(f, "t\tKąt\tPrędkość kątowa\tEnergia całkowita\n");				//naglowek pliku z danymi wejsciowymi
+	fprintf(f, "%lf\t%lf\t", a0 * 180.0 / 3.1415, w0 * 180.0 / 3.1415);		//zapisywanie do pliku danych początkowych, dane kątowe przeliczone na stopnie dla ułatwienia 
+	fprintf(f, "%lf\n", energia(a0, w0));
 	while (t < tk)
 	{
 		fprintf(f, "%lf\t", t + h);
 		vrk4(t, danepocz, h, n, rhs_fun, danekonc);												//liczenie prawej strony rownania rozniczkowego metodą Rungego-Kutty
-		fprintf(f, "%lf\t%lf\t", danekonc[0]*180.0 / 3.1415,danekonc[1]*180.0 / 3.1415);		//zapisywanie do pliku, dane kątowe przeliczone na stopnie
+		fprintf(f, "%lf\t", t + h);
+		fprintf(f, "%lf\t%lf\t", danekonc[0]*180.0 / 3.1415,danekonc[1]*180.0 / 3.1415);		//zapisywanie do pliku poszczególnych wyników 
 		fprintf(f, "%lf\n", energia(danekonc[0], danekonc[1]));
-		for (int i = 0; i < n; i++)																// wyniki jednego kroku calkowania staja sie danymi wejsciowymi nastepnego
+		for (int i = 0; i < n; i++)																// wyniki jednego kroku różniczkowania staja sie danymi wejsciowymi nastepnego
 			danepocz[i] = danekonc[i];
 		t += h;
 	}
