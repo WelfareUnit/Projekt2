@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T16:26:12.564Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="NkNHLZxVxwYTmczqWAak" version="21.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-15T16:28:39.992Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="OAtvC2MCHIXHV87NRgmX" version="21.4.0" type="github">
   <diagram name="Strona-1" id="7y1bbHH6pKz6bEYP6Cvj">
     <mxGraphModel dx="596" dy="413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -44,9 +44,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="n95og1urTgADcSXksq1J-8" value="L sin(α)" style="endArrow=none;html=1;rounded=0;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" target="n95og1urTgADcSXksq1J-7" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="0.2727" y="-20" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="440" y="80" as="sourcePoint" />
             <mxPoint x="280" y="80" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="n95og1urTgADcSXksq1J-7" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.3947917120802828;endAngle=0.4984085036175459;labelBorderColor=default;labelPosition=right;align=left;" parent="1" vertex="1">
