@@ -24,8 +24,8 @@ int main()
 	double tk = 6;						//czas koncowy to 6s
 	double a0 = 0, w0 = 0;				//zmienne na kąt i prędkość kątową początkowe
 	double danepocz[2], danekonc[2];	//tabela na kąt i prędkość kątową przed i po obliczeniach
-	FILE* f = fopen("wyniki.txt", "w");
-	printf("Proszę, podaj  wahadla\n");
+	
+	printf("Prosze, podaj warunki poczatkowe wahadla\n");
 	printf("Masa kulki [kg]: ");
 	scanf("%lf", &m);
 	printf("\nDlugosc sznurka[m]: ");
@@ -46,6 +46,7 @@ int main()
 	w0 *= 3.1415 / 180.0;
 	danepocz[0] = a0;
 	danepocz[1] = w0;
+	FILE* f = fopen("wyniki.txt", "w");										//otwarcie pliku do zapisu
 	fprintf(f, "t\tKąt\tPrędkość kątowa\tEnergia całkowita\n");				//naglowek pliku z danymi wejsciowymi
 	fprintf(f, "%lf\t%lf\t", a0 * 180.0 / 3.1415, w0 * 180.0 / 3.1415);		//zapisywanie do pliku danych początkowych, dane kątowe przeliczone na stopnie dla ułatwienia 
 	fprintf(f, "%lf\n", energia(a0, w0));
