@@ -32,7 +32,7 @@ int main()
 	scanf("%lf", &l);
 	while (a0 == 0)						//sprawdzenie warunkow poczatkowych
 	{
-		printf("\nPodaj wychylenie początkowe:(deg, =/= 0!)  ");
+		printf("\nPodaj wychylenie poczatkowe:(deg, =/= 0!)  ");
 		scanf("%lf", &a0);
 	}
 	
@@ -47,12 +47,13 @@ int main()
 	danepocz[0] = a0;
 	danepocz[1] = w0;
 	FILE* f = fopen("wyniki.txt", "w");										//otwarcie pliku do zapisu
-	fprintf(f, "t\tKąt\tPrędkość kątowa\tEnergia całkowita\n");				//naglowek pliku z danymi wejsciowymi
+
+	fprintf(f, "t\tKat\tPredkosc katowa\tEnergia calkowita\n");				//naglowek pliku z danymi 
+	fprintf(f, "%lf\t", t);
 	fprintf(f, "%lf\t%lf\t", a0 * 180.0 / 3.1415, w0 * 180.0 / 3.1415);		//zapisywanie do pliku danych początkowych, dane kątowe przeliczone na stopnie dla ułatwienia 
 	fprintf(f, "%lf\n", energia(a0, w0));
 	while (t < tk)
 	{
-		fprintf(f, "%lf\t", t + h);
 		vrk4(t, danepocz, h, n, rhs_fun, danekonc);												//liczenie prawej strony rownania rozniczkowego metodą Rungego-Kutty
 		fprintf(f, "%lf\t", t + h);
 		fprintf(f, "%lf\t%lf\t", danekonc[0]*180.0 / 3.1415,danekonc[1]*180.0 / 3.1415);		//zapisywanie do pliku poszczególnych wyników 
