@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T17:25:57.942Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="GYuxyzLHrQ6YijyN7yM5" version="21.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-15T17:27:00.947Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="9fLsfnXsuPjLoxxqeToL" version="21.4.0" type="github">
   <diagram name="Strona-1" id="7y1bbHH6pKz6bEYP6Cvj">
-    <mxGraphModel dx="1423" dy="1582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1375" dy="1548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -49,24 +49,24 @@
         <mxCell id="n95og1urTgADcSXksq1J-12" value="L" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3333FF;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="354" y="160" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="n95og1urTgADcSXksq1J-13" value="&lt;div&gt;Fg=m*g&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;fillColor=#1ba1e2;strokeColor=#006EAF;exitX=0.513;exitY=0.525;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="n95og1urTgADcSXksq1J-1" edge="1">
+        <mxCell id="n95og1urTgADcSXksq1J-13" value="&lt;div&gt;Fg=m*g&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;fillColor=#1ba1e2;strokeColor=#006EAF;exitX=0.513;exitY=0.525;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
           <mxGeometry x="0.0771" y="-40" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="467" y="348" as="sourcePoint" />
-            <mxPoint x="470" y="440" as="targetPoint" />
+            <mxPoint x="470.03999999999996" y="313" as="sourcePoint" />
+            <mxPoint x="470" y="443" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="n95og1urTgADcSXksq1J-14" value="m*g cos(α)" style="endArrow=blockThin;html=1;rounded=0;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=1;startArrow=none;startFill=0;endFill=1;" parent="1" edge="1">
           <mxGeometry x="0.7046" y="27" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="469" y="310" as="sourcePoint" />
-            <mxPoint x="540" y="390" as="targetPoint" />
+            <mxPoint x="469" y="312" as="sourcePoint" />
+            <mxPoint x="540" y="392" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="n95og1urTgADcSXksq1J-16" value="m*g sin(α)" style="endArrow=none;html=1;rounded=0;fillColor=#1ba1e2;strokeColor=#006EAF;startArrow=blockThin;startFill=1;" parent="1" edge="1">
           <mxGeometry x="0.2703" y="-27" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="470" y="440" as="sourcePoint" />
-            <mxPoint x="540" y="390" as="targetPoint" />
+            <mxPoint x="470" y="442" as="sourcePoint" />
+            <mxPoint x="540" y="392" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
