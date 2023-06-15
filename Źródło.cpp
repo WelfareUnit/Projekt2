@@ -18,7 +18,7 @@ double energia(double a, double w)		//obliczanie energii
 }
 int main()
 {
-	double h = 0.0001;					//Większa dokładność,przydatna szczególnie w niestandardowych zestawach danych
+	double h = 0.001;					//Większa dokładność,przydatna szczególnie w niestandardowych zestawach danych ale moze troche przesadzilem
 	int n = 2;							//liczba zmiennych (u nas alfa i omega wiec 2)
 	double t = 0;						//czas poczatkowy to 0
 	double tk = 9;						//czas koncowy to 9s
