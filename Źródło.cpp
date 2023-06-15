@@ -4,11 +4,11 @@
 #include "rk4.h"
 #define G 9.81
 #pragma warning(disable:4996)		//umożlliwienie uzywania scanf w Visual 2019
-double w0=10,a0=15,m=50,l=3;
+double w0=10,a0=15,m=50,l=3;	//jakieś deaultowe wartości, są globalne bo tak xd;
 void rhs_fun(double t, double* tab,double* prawa)//funkcja obliczajaca prawą stronę równania różniczkowego
 {
 	prawa[0]=tab[1];
-	prawa[1]=-G/l*sin(tab[1]);
+	prawa[1]=-G/l*sin(tab[0]);
 }
 double energia(double a, double w)		//obliczanie energii
 {
@@ -29,19 +29,20 @@ int main()
 	scanf("%lf", &m);
 	printf("\nDlugosc sznurka[m]: ");
 	scanf("%lf", &l);
-	printf("\nPodaj wychylenie początkowe: ");
+	printf("\nPodaj wychylenie początkowe:(katy) ");
 	scanf("%lf",&a0);
-	printf("\nPodaj poczatkowa predkosc katowa: ");
+	a0 *= 3.1415/180.0;		//zamiana kątów na radiany
+	printf("\nPodaj poczatkowa predkosc katowa:(katy/sek) ");
 	scanf("%lf",&w0);
+	w0 *= 3.1415 / 180.0;
 	danepocz[0] = a0;
 	danepocz[1] = w0;
 	fprintf(f, "t\tAlfa\tomega\tenergia\n");		//naglowek pliku
 	while (t < tk)
 	{
 		fprintf(f, "%lf\t", t + h);
-		
 		vrk4(t, danepocz, h, n, rhs_fun, danekonc);		//liczenie metodą Rungego-Kutty
-		fprintf(f, "%lf\t%lf\t", danekonc[0],danekonc[1]);		//zapisywanie do pliku
+		fprintf(f, "%lf\t%lf\t", danekonc[0]*180.0 / 3.1415,danekonc[1]*180.0 / 3.1415);		//zapisywanie do pliku
 		fprintf(f, "%lf\n", energia(danekonc[0], danekonc[1]));
 		for (int i = 0; i < n; i++)			// wyniki jednego kroku staja sie danymi wejsciowymi nastepnego
 		{
